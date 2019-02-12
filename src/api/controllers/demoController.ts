@@ -1,10 +1,20 @@
 class DemoController {
-  constructor() {
-    this.init();
+  constructor() {}
+
+  store() {
+    console.log("store");
   }
 
-  init() {
-    console.log("demo controller");
+  show() {
+    console.log("show");
+  }
+
+  update() {
+    console.log("update");
+  }
+
+  destroy() {
+    console.log("destroy");
   }
 }
 

@@ -17,8 +17,16 @@ class DemoRoutes {
   private demo(req: Request, res: Response, next: NextFunction) {
     // res.setHeader("Content-Type", "text/event-stream");
     // res.setHeader("Cache-Control", "no-cache");
-    console.log(req.url);
-    DemoController.init();
+    switch (req.method) {
+      case "Post":
+        return DemoController.store();
+      case "Get":
+        return DemoController.show();
+      case "Put":
+        return DemoController.update();
+      case "Delete":
+        return DemoController.destroy();
+    }
   }
 }
 
