@@ -18,13 +18,13 @@ class DemoRoutes {
     // res.setHeader("Content-Type", "text/event-stream");
     // res.setHeader("Cache-Control", "no-cache");
     switch (req.method) {
-      case "Post":
+      case "POST":
         return DemoController.store();
-      case "Get":
+      case "GET":
         return DemoController.show();
-      case "Put":
+      case "PUT":
         return DemoController.update();
-      case "Delete":
+      case "DELETE":
         return DemoController.destroy();
     }
   }
